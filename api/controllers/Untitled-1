@@ -1,0 +1,4 @@
+CREATE TABLE tutorial.userlogin (
+    id text PRIMARY KEY,
+    password text
+)
