@@ -1,7 +1,7 @@
 'use strict';
 const cassandra = require('cassandra-driver');
-const client = new cassandra.Client({ contactPoints: ['18.188.206.16'], keyspace: 'tutorial' });
-//const client = new cassandra.Client({ contactPoints: ['127.0.0.1'], keyspace: 'tutorial' });
+//const client = new cassandra.Client({ contactPoints: ['18.188.206.16'], keyspace: 'tutorial' });
+const client = new cassandra.Client({ contactPoints: ['127.0.0.1'], keyspace: 'tutorial' });
 
 var util = require('util');
 
@@ -93,23 +93,32 @@ function viewUser(req, res) {
 }
 
 function registerVendor(req, res) {
-  
-  var id = req.body.id;
-  var password = req.body.password;
-  var name = req.body.name;
-  var phoneNo = req.body.phoneNo;
-  var address = req.body.address;
+
+var records=req.body.records;
+var count=0;
+console.log("Total Records is ->"+records.length);
+for(var i=0;i<records.length;i++){
+  addData(records[i].id,records[i].password,records[i].name,records[i].phone,records[i].address)
+}
+
+function addData(id,password,name,phoneNo,address){
 
   const query = "insert INTO vendorlogin (name,id,address,phoneNo,password) VALUES ( '"+name+"','"+id+"','"+address+"','"+phoneNo+"','"+password+"');";
   client.execute(query)
   .then((result) => {
-    res.json("success");
+    count++;
+    if(count==records.length){
+     res.json("success");
+    }
   })
   .catch(err => {
     console.log("error in savingdata(registerUser)->" + err);
-    res.json("error");
+    count++;
+    if(count==records.length){
+     res.json("success");
+    }
   })
-
+}
 }
 
 function updateVendor(req, res) {
