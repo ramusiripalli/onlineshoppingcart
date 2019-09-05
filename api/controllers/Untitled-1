@@ -2,3 +2,36 @@ CREATE TABLE tutorial.userlogin (
     id text PRIMARY KEY,
     password text
 )
+
+CREATE TABLE customer (
+    id text PRIMARY KEY,
+    billingaddress text,
+    name text,
+    orderid text,
+    phone text
+)
+
+CREATE TABLE tutorial.customer (
+    id text PRIMARY KEY,
+    billingaddress text,
+    name text,
+    password text,
+    phone text
+)
+
+{
+	"id":"105",
+	"name":"Ramu Siripalli",
+	"billingaddress":"btm layout stage 2",
+	"password":"12312",
+	"phone":"7888588047"
+	
+	
+}
+
+
+CREATE TABLE tutorial.vendorlogin (
+    id text,
+    password text,
+    PRIMARY KEY (id)
+)

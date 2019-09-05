@@ -170,6 +170,7 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+            
   /deleteVendor:
     # binds a127 app logic to a route
     x-swagger-router-controller: tutorial
@@ -220,6 +221,527 @@ paths:
         default:
           description: Error
           schema:
+            $ref: "#/definitions/ErrorResponse" 
+            
+  /registerCustomer:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: registerCustomer
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerCustomerRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerCustomerResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+            
+  /updateCustomer:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: updateCustomer
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateCustomerRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateCustomerResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"   
+            
+  /deleteCustomer:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: deleteCustomer
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteCustomerRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteCustomerResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse" 
+            
+  /viewCustomer:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: viewCustomer
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewCustomerRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewCustomerResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"  
+            
+  /registerOrders:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: registerOrders
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerOrdersRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerOrdersResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"   
+            
+  /updateOrders:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: updateOrders
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateOrdersRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateOrdersResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"          
+            
+  /deleteOrders:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: deleteOrders
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteOrdersRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteOrdersResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"  
+        
+  /viewOrders:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: viewOrders
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewOrdersRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewOrdersResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+            
+  /registerProducts:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: registerProducts
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerProductsRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerProductsResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"      
+            
+  /updateProducts:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: updateProducts
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateProductsRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateProductsResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"     
+            
+  /deleteProducts:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: deleteproducts
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteProductsRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteProductsResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"    
+            
+  /viewProducts:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: viewProducts
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewProductsRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewProductsResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"    
+            
+  /registerCategories:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: registerCategories
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerCategoriesRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerCategoriesResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"    
+            
+  /updateCategories:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: updateCategories
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateCategoriesRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateCategoriesResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"      
+            
+  /deleteCategories:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: deleteCategories
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteCategoriesRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteCategoriesResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"   
+            
+  /viewCategories:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: viewCategories
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewCategoriesRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewCategoriesResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"   
+            
+  /registerSellers:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: registerSellers
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerSellersRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/registerSellersResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"    
+            
+            
+  /updateSellers:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: updateSellers
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateSellersRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/updateSellersResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"      
+            
+  /deleteSellers:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: deleteSellers
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteSellersRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/deleteSellersResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"      
+            
+  /viewSellers:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: tutorial
+    post:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: viewSellers
+      parameters:
+        - name: data
+          in: body
+          description: The name of the person to whom to say hello
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewSellersRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/viewSellersResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
             $ref: "#/definitions/ErrorResponse"          
             
             
@@ -251,6 +773,7 @@ definitions:
         type: string 
       password:
         type: string 
+        
   deleteUserResponse:
     properties:
       status:
@@ -279,17 +802,11 @@ definitions:
         
   registerVendorRequest:
     properties:
-      name:
-        type: string 
-      address:
-        type: string 
       id:
         type: string 
       password:
         type: string
-      phoneNo:
-        type: string 
-        
+     
   updateVendorResponse:
     properties:
       status:
@@ -321,10 +838,263 @@ definitions:
   viewVendorRequest:
     properties:
       id:
+        type: string   
+        
+  registerCustomerResponse:
+    properties:
+      status:
+        type: string
+        
+  registerCustomerRequest:
+    properties:
+      name:
+        type: string 
+      billingaddress:
+        type: string 
+      id:
+        type: string 
+      password:
+        type: string
+      phone:
+        type: string 
+      orders:
+        type: array
+        items:
+          type: string
+        
+  updateCustomerResponse:
+    properties:
+      status:
+        type: string
+        
+  updateCustomerRequest:
+    properties:
+      id:
+        type: string 
+      password:
+        type: string 
+        
+  deleteCustomerResponse:
+    properties:
+      status:
+        type: string
+        
+  deleteCustomerRequest:
+    properties:
+      id:
+        type: string
+        
+        
+  viewCustomerResponse:
+    properties:
+      status:
+        type: string
+      
+        
+  viewCustomerRequest:
+    properties:
+      id:
+        type: string    
+  
+  registerOrdersResponse:
+    properties:
+      status:
+        type: string
+        
+  registerOrdersRequest:
+    properties:
+      categoryid:
+        type: string 
+      productid:
+        type: string 
+      id:
+        type: string 
+        
+  updateOrdersResponse:
+    properties:
+      status:
+        type: string
+        
+  updateOrdersRequest:
+    properties:
+      id:
+        type: string 
+      categoryid:
+        type: string
+      productid:
+        type: string
+        
+         
+  deleteOrdersResponse:
+    properties:
+      status:
+        type: string
+        
+  deleteOrdersRequest:
+    properties:
+      id:
+        type: string  
+        
+  viewOrdersResponse:
+    properties:
+      status:
+        type: string
+      
+        
+  viewOrdersRequest:
+    properties:
+      id:
+        type: string    
+        
+  registerProductsResponse:
+    properties:
+      status:
+        type: string
+        
+  registerProductsRequest:
+    properties:
+      name:
+        type: string 
+      description:
+        type: string 
+      id:
+        type: string   
+        
+  updateProductsResponse:
+    properties:
+      status:
+        type: string
+        
+  updateProductsRequest:
+    properties:
+      id:
+        type: string 
+      description:
+        type: string
+      name:
+        type: string  
+        
+  deleteProductsResponse:
+    properties:
+      status:
+        type: string
+        
+  deleteProductsRequest:
+    properties:
+      id:
+        type: string  
+        
+  viewProductsResponse:
+    properties:
+      status:
+        type: string
+      
+        
+  viewProductsRequest:
+    properties:
+      id:
+        type: string 
+        
+  registerCategoriesResponse:
+    properties:
+      status:
+        type: string
+        
+  registerCategoriesRequest:
+    properties:
+      name:
+        type: string 
+      description:
+        type: string 
+      id:
+        type: string 
+        
+  updateCategoriesResponse:
+    properties:
+      status:
+        type: string
+        
+  updateCategoriesRequest:
+    properties:
+      id:
+        type: string 
+      description:
+        type: string
+      name:
+        type: string   
+        
+  deleteCategoriesResponse:
+    properties:
+      status:
+        type: string
+        
+  deleteCategoriesRequest:
+    properties:
+      id:
+        type: string   
+        
+  viewCategoriesResponse:
+    properties:
+      status:
+        type: string
+      
+        
+  viewCategoriesRequest:
+    properties:
+      id:
+        type: string  
+        
+  registerSellersResponse:
+    properties:
+      status:
+        type: string
+        
+  registerSellersRequest:
+    properties:
+      products:
+        type: array
+        items:
+          type: string
+      categories:
+        type: string 
+      id:
+        type: string     
+        
+  updateSellersResponse:
+    properties:
+      status:
+        type: string
+        
+  updateSellersRequest:
+    properties:
+      id:
+        type: string 
+      products:
+        type: string
+      categories:
         type: string      
         
+  deleteSellersResponse:
+    properties:
+      status:
+        type: string
         
+  deleteSellersRequest:
+    properties:
+      id:
+        type: string      
+        
+  viewSellersResponse:
+    properties:
+      status:
+        type: string
       
+        
+  viewSellersRequest:
+    properties:
+      id:
+        type: string      
+           
   ErrorResponse:
     required:
       - message
